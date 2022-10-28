@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'login2.dart';
+
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -16,8 +18,8 @@ class LoginPage extends StatelessWidget {
         child: ListView(
           children: [
             SizedBox(
-              width: 130,
-              height: 130,
+              width: 120,
+              height: 120,
               child: Image.asset('imagem/logoicone.png'),
             ),
             const SizedBox(
@@ -52,7 +54,7 @@ class LoginPage extends StatelessWidget {
               style: const TextStyle(fontSize: 20),
             ),
             Container(
-              height: 60,
+              height: 40,
               alignment: Alignment.centerRight,
               child: TextButton(
                 onPressed: () {},
@@ -68,10 +70,10 @@ class LoginPage extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 25,
+              height: 15,
             ),
             Container(
-              height: 60,
+              height: 50,
               alignment: Alignment.centerLeft,
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
@@ -89,7 +91,11 @@ class LoginPage extends StatelessWidget {
               ),
               child: SizedBox.expand(
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => Logindois()),
+                    );
+                  },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -105,8 +111,8 @@ class LoginPage extends StatelessWidget {
                       Container(
                         child: SizedBox(
                           child: Image.asset('imagem/icone_login.png'),
-                          height: 45,
-                          width: 45,
+                          height: 40,
+                          width: 40,
                         ),
                       ),
                     ],
@@ -118,7 +124,7 @@ class LoginPage extends StatelessWidget {
               height: 15,
             ),
             Container(
-              height: 60,
+              height: 50,
               alignment: Alignment.centerLeft,
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
@@ -151,8 +157,8 @@ class LoginPage extends StatelessWidget {
                       ),
                       SizedBox(
                         child: Image.asset('imagem/icone_facebook.png'),
-                        height: 45,
-                        width: 45,
+                        height: 40,
+                        width: 40,
                       ),
                     ],
                   ),
@@ -171,6 +177,24 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {},
+              ),
+            ),
+            SizedBox(
+              height: 60,
+              child: TextButton(
+                child: const Text(
+                  'Avançar',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 15,
+                    color: Colors.black,
+                  ),
+                ),
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => Logindois()),
+                  );
+                },
               ),
             ),
           ],
