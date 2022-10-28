@@ -48,7 +48,7 @@ class LoginPage extends StatelessWidget {
                 labelStyle: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.w400,
-                  fontSize: 20,
+              fontSize: 20,
                 ),
               ),
               style: const TextStyle(fontSize: 20),
